@@ -18,8 +18,9 @@
         </div>
     </div>
     <br>
-    <div style="display: flex;">
-        <div class="window" style="width: 290px; margin-right: 30px;">
+    <!-- container -->
+    <div style="display: inline-grid; grid-gap: 15px 15px;">
+        <div class="window" style="width: 290px; grid-column: 1; grid-row: 1">
             <div class="title-bar">
                 <div class="title-bar-text">Ons nieuw marktplein!</div>
                 <div class="title-bar-controls">
@@ -43,7 +44,8 @@
             </div>
         </div>
 
-        <div class="window" style="width: 70%; height: 235px">
+
+        <div class="window" style="width: 100%; height: 235px"  style="grid-column: 1; grid-row: 2">
             <div class="title-bar">
                 <div class="title-bar-text">Over onze website!</div>
                 <div class="title-bar-controls">
@@ -56,21 +58,28 @@
                 <div style="display:flex;">
                     <img src="/static/hengelo98.jpg" style="margin-right: 10px; width: 290px; height: 200px;">
                     <div>
-                        <h2>Welkom op Hengelo '98!!</h2>
+                        <h4 style="margin-bottom: 0px;">Welkom op Hengelo '98!</h4>
                         <p>
-                            De website voor al je retro nieuws over Hengelo!
+                            <i>De website voor al je retro nieuws over Hengelo!</i><br>
+                            Deze website is gemaakt met <a href="https://pages.github.com/">github pages</a>,
+                            je kan de source-code <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">hier</a> vinden.<br>
+                            De library die ik voor deze website gebruikt heb is <a href="https://jdan.github.io/98.css/">98.css</a>,
+                            een css library gemaakt <br>om de stijl van oude websites na te kunnen maken.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- countdown window -->
-
+        <div class="window" style="width: 70%; grid-column: 2; grid-row: 2">
+            <div class="title-bar">
+                <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
+            </div>
+            <div class="window-body">hello!</div>
+        </div>
     </div>
 
-    <div class="window" style="width: 70%; " id="countdown-window">
-            
-    </div>
+
 
 </body>
 </html>
@@ -81,8 +90,5 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
-    }
-    .countdown-window {
-        margin-left: 320px;
     }
 </style>
