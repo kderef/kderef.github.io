@@ -1,9 +1,5 @@
 function to00format(num, len = 2) {
-    var res = num;
-    while (res.length != len) {
-        res = "0" + res;
-    }
-    return res;
+    return num.padStart(len, "0");
 }
 
 const currentYear = new Date().getFullYear();
