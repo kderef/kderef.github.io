@@ -1,52 +1,32 @@
-/* https://github.com/morhetz/gruvbox */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 :root {
-    margin: 0;
-    padding: 0;
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+#window-container {
+    display: inline-grid;
+    grid-gap: 15px 15px;
 }
 
-#navbar-image {
+#countdown-win {
+    width: 370px;
+    height: 120px;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 15px;
+}
+
+#about-win {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 235px;
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.navbar {
-    width: 100%;
-    background-color: #282828;
-    overflow: auto;
-}
-
-/* Navbar links */
-.navbar a {
-    float: left;
-    text-align: center;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-    transition: ease-in-out;
-    transition-duration: 0.2s;
-    background-color: #000;
-}
-  
-
-* {
-    font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', serif;
+#h98-logo {
+    margin-right: 10px;
+    width: 290px;
+    height: 200px;
 }

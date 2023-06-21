@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="/static/style.css"/>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- timer script -->
+    <script src="script/countdown.js" defer></script>
+    <script src="script/countdownHelp.js"></script>
+ 
     <title>Hengelo '98</title>
 </head>
 
@@ -19,7 +24,7 @@
     </div>
     <br>
     <!-- container -->
-    <div style="display: inline-grid; grid-gap: 15px 15px;">
+    <div id="window-container">
         <div class="window" style="width: 290px; grid-column: 1; grid-row: 1">
             <div class="title-bar">
                 <div class="title-bar-text">Ons nieuw marktplein!</div>
@@ -30,7 +35,7 @@
                 </div>
             </div>
             <div class="window-body">
-                <img src="static/index.jpg">
+                <img src="/img/index.jpg">
                 <b>Het plein is weer van de stad</b>
                 <p>
                     Het nieuwe marktplein is klaar en dat werd groots gevierd!<br>
@@ -44,51 +49,55 @@
             </div>
         </div>
 
-
-        <div class="window" style="width: 100%; height: 235px"  style="grid-column: 1; grid-row: 2">
-            <div class="title-bar">
-                <div class="title-bar-text">Over onze website!</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
+        <div style="display: flex; grid-column: 2;">
+            <div id="about-win" class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Over onze website!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
                 </div>
-            </div>
-            <div class="window-body">
-                <div style="display:flex;">
-                    <img src="/static/hengelo98.jpg" style="margin-right: 10px; width: 290px; height: 200px;">
-                    <div>
-                        <h4 style="margin-bottom: 0px;">Welkom op Hengelo '98!</h4>
-                        <p>
-                            <i>De website voor al je retro nieuws over Hengelo!</i><br>
-                            Deze website is gemaakt met <a href="https://pages.github.com/">github pages</a>,
-                            je kan de source-code <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">hier</a> vinden.<br>
-                            De library die ik voor deze website gebruikt heb is <a href="https://jdan.github.io/98.css/">98.css</a>,
-                            een css library gemaakt <br>om de stijl van oude websites na te kunnen maken.
-                        </p>
+                <div class="window-body">
+                    <div style="display:flex">
+                        <img id="h98-logo" src="/img/hengelo98.jpg">
+                        <div>
+                            <h4 style="margin-bottom: 0px;">Welkom op Hengelo '98!</h4>
+                            <p>
+                                <i>De website voor al je retro nieuws over Hengelo!</i><br>
+                                Deze website is gemaakt met <a href="https://pages.github.com/">github pages</a>,
+                                je kan de source-code <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">hier</a>
+                                vinden.<br>
+                                De library die ik voor deze website gebruikt heb is <a
+                                    href="https://jdan.github.io/98.css/">98.css</a>,
+                                een css library gemaakt <br>om de stijl van oude websites na te kunnen maken.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- countdown window -->
-        <div class="window" style="width: 70%; grid-column: 2; grid-row: 2">
-            <div class="title-bar">
-                <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
+            <!-- countdown window -->
+            <div id="countdown-win" class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help" onclick="showCountdownHelp()"></button> <!-- TODO: onclick reveal date -->
+                    </div>
+                </div>
+                <div class="window-body" id="countdown-body"></div>
+
             </div>
-            <div class="window-body">hello!</div>
+
+            <!-- countdown code -->
+            <script>
+ 
+            </script>
         </div>
+
     </div>
 
 
 
 </body>
 </html>
-
-<style>
-    :root {
-        background-image: url("/static/bg.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
-</style>
