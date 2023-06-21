@@ -2,3 +2,4 @@
 git add .
 read -p "msg: " commitmsg
 git commit -m "$commitmsg"
+git push
