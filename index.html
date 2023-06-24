@@ -2,19 +2,25 @@
 <html lang="nl">
 
 <head>
+    <!-- de CSS library voor de "retro" effects -->
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="/static/style.css"/>
 
+    <!-- custom stylesheet die ik geschreven heb. -->
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!-- de encoding -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- timer script -->
     <script src="script/countdown.js" defer></script>
- 
+
+    <!-- de titel die weergegeven wordt op je tab bar -->
     <title>Hengelo '98</title>
 </head>
 
 <body>
+    <!-- de balk bovenaan de website-->
     <div class="title-bar" style="width: 100%;">
         <div class="title-bar-text">Welkom op onze site!</div>
         <div class="title-bar-controls">
@@ -22,7 +28,8 @@
         </div>
     </div>
     <br>
-    <!-- container -->
+
+    <!-- de container voor alle 'windows' -->
     <div id="window-container">
         <div class="window" style="width: 290px; grid-column: 1; grid-row: 1">
             <div class="title-bar">
@@ -47,6 +54,35 @@
                 </p>
             </div>
         </div>
+        <!-- de window die de informatieve video bevat. -->
+        <div class="window" id="video-win">
+            <div class="title-bar">
+                <div class="title-bar-text"><i>[Video]</i> Mooi Hengelo!</div>
+                <!-- NOTE: bij <i>text</i> word text schuingedrukt. -->
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                </div>
+            </div>
+            <div class="window-body" style="height: 315px;">
+                <div style="display:inline-flex">
+                    <!-- om een video te embedden gebruiken wij hier een iframe. -->
+                    <iframe width="560" height="315" style="margin-right: 15px;"
+                        src="https://www.youtube.com/embed/FUz67OIvc-k" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <div style="display: grid">
+                        <h4 style="margin-top: 0px;"><i>RTV oost</i>: Mooi Overijssel - Hengelo</h4>
+                        <!-- de video beschrijving -->
+                        <p style="margin-top: -33%; font-size:medium;">
+                            In deze video gaat RTV Oost op bezoek in Hengelo, TODO! <!-- TODO complete text -->
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--  -->
 
         <div style="display: flex; grid-column: 2;">
             <div id="about-win" class="window">
@@ -68,8 +104,8 @@
                                 Deze website is gemaakt met <a href="https://pages.github.com/">github pages</a>,
                                 je kan de source-code <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">hier</a>
                                 vinden.<br>
-                                De library die ik voor deze website gebruikt heb is <a
-                                    href="https://jdan.github.io/98.css/">98.css</a>,
+                                De library die ik voor deze website gebruikt heb is
+                                <a href="https://jdan.github.io/98.css/">98.css</a>,
                                 een css library gemaakt <br>om de stijl van oude websites na te kunnen maken.
                             </p>
                         </div>
@@ -81,22 +117,19 @@
                 <div class="title-bar">
                     <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
                     <div class="title-bar-controls">
-                        <button aria-label="Help" onclick="showCountdownHelp()"></button> <!-- TODO: onclick reveal date -->
+                        <button aria-label="Help" onclick="showCountdownHelp()"></button>
                     </div>
                 </div>
                 <div class="window-body" id="countdown-body"></div>
 
             </div>
-
-            <!-- countdown code -->
-            <script>
- 
-            </script>
         </div>
+
 
     </div>
 
 
 
 </body>
+
 </html>

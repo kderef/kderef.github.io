@@ -25,6 +25,12 @@
     grid-row: 2;
 }
 
+#video-win {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -155px;
+}
+
 #h98-logo {
     margin-right: 10px;
     width: 290px;

@@ -1,10 +1,22 @@
-function showCountdownHelp() {
-    alert("Tijdens de Franse overheersing (1795-1813) werd Hengelo op 1 mei 1802 een zelfstandige gemeente, bestaande uit het dorp Hengelo en een aangrenzend deel dat werd aangeduid met Veldzijde.\n\nbron: https://www.hengelo.nl/Ontdek-Hengelo/Geschiedenis-van-Hengelo.html")
-}
+/*
+dit is het bericht dat wordt getoond wanneer
+je het '?' knopje indrukt rechtsbovenin de timer window.
+*/
+const countdownHelpMsg = `
+Tijdens de Franse overheersing (1795-1813) werd Hengelo op 1 mei 1802 een zelfstandige gemeente,
+bestaande uit het dorp Hengelo en een aangrenzend deel dat werd aangeduid met Veldzijde.
 
-function to00format(num, len = 2) {
-    return num.toString().padStart(len, "0");
-}
+bron: https://www.hengelo.nl/Ontdek-Hengelo/Geschiedenis-van-Hengelo.html`;
+
+// de function die wordt 'gecalled' wanneer de gebruiker op het '?' drukt.
+const showCountdownHelp = () => alert(countdownHelpMsg);
+/*
+een help function die tijd van bijvoorbeeld '5:12:6' naar '05:12:06' verandert.
+ 'n' is een getal zoals "5" of "16".
+ 'l' is de lengte die hij moet worden, bijvoorbeeld:
+      n = "5"
+*/
+const fmt00 = (n, l = 2) => n.toString().padStart(l, "0");
 
 const currentYear = new Date().getFullYear();
 var countdownDate = new Date(`May 1, ${currentYear + 1}`);
@@ -17,7 +29,7 @@ var update = setInterval(function () {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const msg = `<h3>${to00format(days, 3)} : ${to00format(hours)} : ${to00format(minutes)} : ${to00format(seconds)}</h3>`;
+    const msg = `<h3>${fmt00(days, 3)} : ${fmt00(hours)} : ${fmt00(minutes)} : ${fmt00(seconds)}</h3>`;
 
     // console.log(msg);
     document.getElementById("countdown-body").innerHTML = msg;
