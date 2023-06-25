@@ -112,19 +112,34 @@
                     </div>
                 </div>
             </div>
-            <!-- countdown window -->
-            <div id="countdown-win" class="window">
-                <div class="title-bar">
-                    <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Help" onclick="showCountdownHelp()"></button>
+            <div style="position: relative;">
+                <!-- countdown window (1 mei) -->
+                <div id="countdown-win-a" class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Timer tot de verjaardag van Hengelo!</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Help" onclick="showCountdownHelp(bevrijdingsDag)"></button>
+                        </div>
                     </div>
+                    <div class="window-body" id="countdown-body-bevr"></div>
                 </div>
-                <div class="window-body" id="countdown-body"></div>
+
+                <!-- countdown window (bevrijdingsdag) -->
+                <div id="countdown-win-b" class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Timer tot de bevrijdingsdag van Hengelo!</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Help" onclick="showCountdownHelp(zelfstandigheidsDag)"></button>
+                        </div>
+                    </div>
+                    <div class="window-body" id="countdown-body-zelfst"></div>
+                </div>
 
             </div>
+
         </div>
     </div>
 
 </body>
+
 </html>

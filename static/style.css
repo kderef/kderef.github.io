@@ -12,11 +12,19 @@
     grid-gap: 15px 15px;
 }
 
-#countdown-win {
+#countdown-win-a {
     width: 380px;
     height: 120px;
     grid-column: 2;
     grid-row: 2;
+    margin-left: 15px;
+}
+
+#countdown-win-b {
+    width: 380px;
+    height: 120px;
+    grid-column: 2;
+    grid-row: 3;
     margin-left: 15px;
 }
 
