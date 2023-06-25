@@ -54,6 +54,19 @@
                 </p>
             </div>
         </div>
+        <div class="window" style="width: 290px; grid-column: 1; grid-row: 2">
+            <div class="title-bar">
+                <div class="title-bar-text">De Hengelose Quiz!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img width="275" src="/img/hengelo-vlag.png" onclick="window.location.href = '/quiz.html'">
+            </div>
+        </div>
         <!-- de window die de informatieve video bevat. -->
         <div class="window" id="video-win">
             <div class="title-bar">
@@ -118,7 +131,7 @@
                 <div class="title-bar">
                     <div class="title-bar-text">Timer voor belangrijke Hengelose data!</div>
                     <div class="title-bar-controls">
-                        <button aria-label="Help" onclick="showCountdownHelp('todo!')"></button>
+                        <button aria-label="Help" onclick="showDateHelp()"></button>
                     </div>
                 </div>
                 <div class="window-body" id="countdown-body">

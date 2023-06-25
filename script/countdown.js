@@ -6,7 +6,15 @@ const createCountdownDate = (date, desc, help) => {
     }
 }
 
-const bevrijdingsDag = createCountdownDate(
+var dates = [];
+
+const addDate = (date, desc, help) => {
+    const d = {"date": date, "description": desc, "help": help};
+    dates.push(d);
+    return d;
+}
+
+const bevrijdingsDag = addDate(
     "May 4", "bevrijdingsdag (4 mei)&emsp;&emsp;&emsp;&emsp;&emsp;",
     `
 Tijdens de Franse overheersing (1795-1813) werd Hengelo op 1 mei 1802 een zelfstandige gemeente,
@@ -14,7 +22,7 @@ bestaande uit het dorp Hengelo en een aangrenzend deel dat werd aangeduid met Ve
 
 bron: https://www.hengelo.nl/Ontdek-Hengelo/Geschiedenis-van-Hengelo.html`
 )
-const zelfstandigheidsDag = createCountdownDate(
+const zelfstandigheidsDag = addDate(
     "May 1", "zelfstandigheidsdag (1 mei)&emsp;&emsp;&nbsp;",
     `
 Tijdens de Franse overheersing (1795-1813) werd Hengelo op 1 mei 1802 een zelfstandige gemeente,
@@ -24,8 +32,13 @@ bron: https://www.hengelo.nl/Ontdek-Hengelo/Geschiedenis-van-Hengelo.html`
 )
 
 // de function die wordt 'gecalled' wanneer de gebruiker op het '?' drukt.
-function showCountdownHelp(date) {
-    alert(date["help"]);
+function showDateHelp() {
+    var msg = "";
+    dates.forEach(d => {
+        msg += (d["description"].replaceAll('&emsp;', '').replaceAll('&nbsp;', '') + "\n" + d["help"]);
+        msg += "\n===============================\n";
+    });
+    alert(msg);
 }
 
 const padl = (n, l = 2) => n.toString().padStart(l, "0");

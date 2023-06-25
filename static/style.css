@@ -43,3 +43,47 @@
     font-size: small;
     font-weight: 900;
 }
+
+.date-help-button {
+    width: 2px;
+    height: 2px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+/* ******************************* */
+/* this is for the /quiz.html page */
+
+#quiz-win {
+    width: 1000px;
+    height: 287px;
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+}
+
+#quiz-header {
+    margin-top: 2px;
+    width: 100%;
+    position: absolute;
+}
+
+#quiz-logo {
+    margin-right: 15px;
+}
+
+#quiz-content {
+    display: flex;
+    margin-top: 30px;
+    height: 100%;
+}
+
+#quiz-content > h4 {
+    font-size: large;
+}
+
+#quiz-content > fieldset {
+    width: 100%;
+    min-height: 533px;
+}
