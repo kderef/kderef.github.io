@@ -1,5 +1,9 @@
 # Kn-Ht.github.io
 ---
+## DISCLAIMER:
+#### Dit is een school project.
+
+
 ### beschrijving:
 Een 'retro' 1990 - 2000 stijl website met nieuws en leuke informatie over Hengelo!
 
