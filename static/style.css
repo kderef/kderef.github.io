@@ -71,6 +71,8 @@
 
 #quiz-logo {
     margin-right: 15px;
+    width: 375px;
+    height: 250px;
 }
 
 #quiz-content {
@@ -86,4 +88,10 @@
 #quiz-content > fieldset {
     width: 100%;
     min-height: 533px;
+}
+
+#quiz-content > .sunken-panel {
+    height: 76%;
+    width: 100%;
+    margin-top: 25px;
 }
