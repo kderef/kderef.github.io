@@ -14,7 +14,8 @@ const showCountdownHelp = () => alert(countdownHelpMsg);
 een help function die tijd van bijvoorbeeld '5:12:6' naar '05:12:06' verandert.
  'n' is een getal zoals "5" of "16".
  'l' is de lengte die hij moet worden, bijvoorbeeld:
-      n = "5"
+      n = "5" en l = 2, resultaat: "05"
+      n = "10" en l = 4, resultaat: "0010"
 */
 const fmt00 = (n, l = 2) => n.toString().padStart(l, "0");
 
@@ -31,6 +32,5 @@ var update = setInterval(function () {
 
     const msg = `<h3>${fmt00(days, 3)} : ${fmt00(hours)} : ${fmt00(minutes)} : ${fmt00(seconds)}</h3>`;
 
-    // console.log(msg);
     document.getElementById("countdown-body").innerHTML = msg;
 });

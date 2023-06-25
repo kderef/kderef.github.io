@@ -1,10 +1,12 @@
 :root {
+    /* de achtergrond van de website */
     background-image: url("/img/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 }
 
+/* de container voor alle 'windows' */
 #window-container {
     display: inline-grid;
     grid-gap: 15px 15px;
