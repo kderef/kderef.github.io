@@ -86,10 +86,16 @@
                     <div style="display: grid">
                         <h4 style="margin-top: 0px;"><i>RTV oost</i>: Mooi Overijssel - Hengelo</h4>
                         <!-- de video beschrijving -->
-                        <p style="margin-top: -33%; font-size:medium;">
-                            In deze video gaat RTV Oost op bezoek in Hengelo,<br>
-                            ze gaan langs bij verschillende leuke plekjes zoals het marktplein,<br>
-                            de Lambertuskerk, en nog meer!
+                        <p style="margin-top: -100px; font-size:medium">
+                            <b>Welkom in het knusse stadje Hengelo, gelegen in het hart van Twente!</b><br>
+                            Dit charmante plaatsje omarmt je met warmte en gastvrijheid.<br>
+                            Wandel door de gezellige straatjes en ontdek de unieke mix van historische en moderne architectuur die de stad karakter geeft.<br>
+                            Hengelo ademt een rustige en ontspannen sfeer, waardoor je kunt genieten van de eenvoudige geneugten van het leven.<br>
+                            Maak kennis met de vriendelijke lokale bevolking, die je graag vertelt over de rijke tradities en cultuur die hier gedijen.<br>
+                            In dit Twentse pareltje vind je een scala aan leuke winkels, boetiekjes en gezellige cafés,<br>
+                            waar je kunt genieten van een kopje koffie of typische Twentse lekkernijen.<br>
+                            Vergeet ook niet de wekelijkse markt te bezoeken,<br>
+                            waar lokale producten en ambachten worden aangeboden en de stad tot leven komt.
                         </p>
                     </div>
                 </div>
@@ -112,31 +118,56 @@
                         <img id="h98-logo" src="/img/hengelo98.jpg">
                         <div>
                             <h4 style="margin-bottom: 0px;">Welkom op Hengelo '98!</h4>
-                            <p>
-                                <i>De website voor al je retro nieuws over Hengelo!</i><br>
+
+                            <!-- [Oude text]
                                 Deze website is gemaakt met <a href="https://pages.github.com/">github pages</a>,
                                 je kan de source-code <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">hier</a>
                                 vinden.<br>
                                 De library die ik voor deze website gebruikt heb is
                                 <a href="https://jdan.github.io/98.css/">98.css</a>,
                                 een css library gemaakt <br>om de stijl van oude websites na te kunnen maken.
+                            -->
+                            <p>
+                                <b>Welkom bij Hengelo in de jaren 90!</b><br>
+                                Wij zijn een nostalgisch eerbetoon aan de stad Hengelo, geïnspireerd door de iconische stijl van Windows 98.<br>
+                                Ontdek de charme van Hengelo uit het verleden met informatie, foto's en interactieve content.<br>
+                                Herbeleef de nostalgische sfeer en geniet van de levendige geschiedenis van de stad.<br>
+                                <u>Bedankt voor je bezoek!</u>
                             </p>
+                            <b>technische info:</b><br>
+                            gemaakt met: <a href="https://pages.github.com/">github pages</a> voor hosting, <a href="https://jdan.github.io/98.css/">98.css</a>voor de stijl.<br>
+                            source code: <a href="https://github.com/Kn-Ht/Kn-Ht.github.io">github repository</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div style="position: relative;">
-            <!-- countdown window -->
-            <div id="countdown-win" class="window">
-                <div class="title-bar">
-                    <div class="title-bar-text">Timer voor belangrijke Hengelose data!</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Help" onclick="showDateHelp()"></button>
+                <!-- countdown window -->
+                <div id="countdown-win" class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Timers voor belangrijke Hengelose data!</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Help" onclick="showDateHelp()"></button>
+                        </div>
+                    </div>
+                    <div class="window-body" id="countdown-body">
+                        <h4 class="timertext" id="countdown-a"></h4> <!-- bevrijdingsdag! -->
+                        <h4 class="timertext" id="countdown-b"></h4> <!-- zelfstandigheidsdag! -->
                     </div>
                 </div>
-                <div class="window-body" id="countdown-body">
-                    <h4 class="timertext" id="countdown-a"></h4> <!-- bevrijdingsdag! -->
-                    <h4 class="timertext" id="countdown-b"></h4> <!-- zelfstandigheidsdag! -->
+
+                <div class="window" id="spotify-win">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Leuke nummers oet Twente!&emsp; <i>(playlist door: Maarten Sijbers)</i></div>
+                    </div>
+                    <div class="window-body">
+                         <!-- spotify embed -->
+                        <iframe id="spotify-embed"
+                            src="https://open.spotify.com/embed/playlist/0P5Qh1zv4po5oQvEnz5798?utm_source=generator&theme=0"
+                            frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
 

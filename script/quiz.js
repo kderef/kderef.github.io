@@ -92,7 +92,7 @@ function endQuiz() {
                 i + 1, questions[i].title,
                 questions[i].options[userAnswers[i]],
                 questions[i].correct,
-                (answerRight)? "ja" : "nee"
+                (answerRight) ? "ja" : "nee"
             ]
         )
     }
@@ -151,7 +151,7 @@ function generateQuizContent() {
     }
 
     var buttons = [
-        (quizPos + 1 === questions.length)?
+        (quizPos + 1 === questions.length) ?
             '<button style="position: absolute; top: 87%; left: 90%;" onclick="endQuiz()">beëindig quiz</button>' :
             '<button style="position: absolute; top: 87%; left: 89%;" onclick="nextQuestion()">volgende vraag</button>',
     ];
