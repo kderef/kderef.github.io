@@ -1,0 +1,112 @@
+/* global stylesheet */
+
+:root {
+    /* de achtergrond van de website */
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* de container voor alle 'windows' */
+#window-container {
+    display: inline-grid;
+    grid-gap: 15px 15px;
+}
+
+#countdown-win {
+    width: 380px;
+    height: 100px;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 15px;
+}
+
+#spotify-win {
+    width: 380px;
+    height: 115px;
+    grid-column: 2;
+    grid-row: 3;
+    margin-left:15px;
+    margin-top: 15px;
+}
+#spotify-embed {
+    width: 100%;
+    height: 135px;
+}
+
+#about-win {
+    width: 100%;
+    height: 235px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#video-win {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -155px;
+}
+
+#h98-logo {
+    margin-right: 10px;
+    width: 290px;
+    height: 200px;
+}
+
+.timertext {
+    font-size: small;
+    font-weight: 900;
+}
+
+.date-help-button {
+    width: 2px;
+    height: 2px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+/* ******************************* */
+/* this is for the /quiz.html page */
+
+#quiz-win {
+    width: 1000px;
+    height: 287px;
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+}
+
+#quiz-header {
+    margin-top: 2px;
+    width: 100%;
+    position: absolute;
+}
+
+#quiz-logo {
+    margin-right: 15px;
+    width: 375px;
+    height: 250px;
+}
+
+#quiz-content {
+    display: flex;
+    margin-top: 30px;
+    height: 100%;
+}
+
+#quiz-content > h4 {
+    font-size: large;
+}
+
+#quiz-content > fieldset {
+    width: 100%;
+    min-height: 533px;
+}
+
+#quiz-content > .sunken-panel {
+    height: 76%;
+    width: 100%;
+    margin-top: 25px;
+}
